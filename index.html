@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Catamaran:wght@100;500&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        function digitalClock() {
+         var date = new Date();
+         var hours = date.getHours();
+         var minutes = date.getMinutes();
+         var seconds = date.getSeconds();
+            //* добавление ведущих нулей */
+           if (hours < 10) hours = "0" + hours;
+           if (minutes < 10) minutes = "0" + minutes;
+           if (seconds < 10) seconds = "0" + seconds;
+             document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+             setTimeout("digitalClock()", 1000);
+        }
+       </script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div id="id_clock"></div>
+             <script>digitalClock();</script>
+            <p>
+                dLa
+            </p>
+            <img src="icon.png" >
+            </div>
+         <div class="line">
+         </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="info1">
+                <img src="thermometer.jpg" class="thermometer"> <img src="celsius.jpg" class="celsius"><p class="text1">температура</p>
+            </div>
+            <div class="info2">
+                <img src="water.png" class="water"> <p class="text2">Влажность</p>
+            </div>
+            <div class="info3">
+                <img src="watering can.png" class="watering_can"> <p class="text3">Уровень жидкости</p>
+            </div>
+            <div class="info4">
+                <img src="fan.jpg" class="fan"> <p class="text4">Вентиляция</p>
+            </div>
+        </div>
+        <div class="lamp">
+            <img src="lamp.png" class="lamp_foto"> 
+            <p class="lamp_1">
+                Управление освещением 
+            </p>
+            <p class="level">
+              Уровень 1
+            </p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <p class="level2">
+                Уровень 2
+            </p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <p class="level3">
+                Уровень 3
+            </p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+
+        </div>
+        <div class="watering">
+            <img src="water.jpg" class="water2">
+            <p class="text5">
+                Управление Паливом
+            </p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+        </div>
+        <div class="camera">
+            <p class="text6">Нет Сигнала</p>
+            <div class="camers">
+                <button> Крапива</button>
+                <button> Цветы</button>
+            </div>
+        </div>
+        <div>
+            <p><textarea rows="20" cols="105" name="text"></textarea></p>
+        </div>
+    </main>
+</body>
+</html>
